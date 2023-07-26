@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> HireNet | Find A Jobs in india</title>
-    <link rel="icon" type="image/png" href="img/logo.png"/>
+    <link rel="icon" type="image/png" href="images/logo-2.webp"/>
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css"rel="stylesheet"/>
     <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
 <?php include 'imp/dbconnect.php';?>
 <header id="Navbar">
-        <img src="img/logo.png" alt="logo"  id="logo" >
+        <img src="img/logo.jpg" alt="logo"  id="logo">
         <nav class="navbar">
             <ul class="navbar-list">
                 <li><a href="#Navbar" class="navbar-link Home">Home</a></li>
@@ -25,8 +25,7 @@
 <main>
     <!-- hero-section start hear -->
     <section class="hero-section section">
-      <!--  -->
-        <div class="hero-image"><img src="img/car2.jpg" alt="We Are Hiring"></div>
+        <div class="hero-image"><img src="http://hirenet.orgfree.com/images/carousel-img-1.webp" alt="We Are Hireing"></div>
     </section>
     <!-- Filter section start hear -->
     <section class="filters-section section">
@@ -167,9 +166,9 @@
                 </div>
             </div>  
 
-    <!--   =============================jobs end =============================  -->          
+<!--   =============================jobs end =============================  -->          
     </section>
-    <!-- Contact section start hear -->
+    <!-- Conract section start hear -->
     <section class="section-contact section" id="Contact">
         <h2 class="common-heading">Contact</h2>
         <div class="section-contact-main contact-container">
@@ -234,7 +233,7 @@
         <div class="grid-2 grid-four-column">
             <div class="f-about">
                 <h3>About</h3>
-                <p class="footer-text">Welcome to our job portal website, connecting job seekers with opportunities and helping employers find the perfect candidates.</p>
+                <p>Welcome to our job portal website, connecting job seekers with opportunities and helping employers find the perfect candidates.</p>
             </div>
             
             <div class="f-links">

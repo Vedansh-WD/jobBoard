@@ -127,6 +127,7 @@ header {
     justify-content: space-between;
     align-items: center;
     position: sticky;
+    border-bottom: 2px solid black;
 }
 
 header>img {
@@ -159,7 +160,6 @@ header>img {
     align-items: center;
     justify-content: center;
     background: var(--bg-helper);
-    margin: 0 3rem;
 }
 
 .hero-image {
@@ -289,9 +289,6 @@ button {
 
 .section-contact-main {
     background: var(--bg-helper);
-}
-
-.section-contact-main {
     padding: 2% 10%;
     border-radius: 7px;
 }
@@ -348,4 +345,83 @@ a,
 .f-address>address>div>p {
     font-size: 1.8rem;
     color: var(--helper-tint);
+}
+
+
+/* ==================================================
+  -+-+-+-+-+ login section start +-+-+-+-+-
+  ================================================== */
+
+.login-container {
+    background: var(--bg-helper);
+    padding: 5% 25%;
+    border-radius: 7px;
+}
+
+.login-container>form {
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+    padding-bottom: 5rem;
+}
+
+.login-container input {
+    padding: 1.5rem 2rem;
+    border: 0.1rem solid black;
+    border-radius: 5px;
+    font-size: 1.7rem;
+    font-weight: 500;
+    width: 100%;
+    color: var(--heading);
+    background: var(--bg);
+}
+
+.login-container>.grid {
+    margin-left: 1rem;
+}
+
+/* ==================================================
+  -+-+-+-+-+ Singup section start +-+-+-+-+-
+  ================================================== */
+
+.singup-container {
+    background: var(--bg-helper);
+    padding: 5% 25%;
+    border-radius: 7px;
+}
+
+.singup-container>form {
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+    padding-bottom: 5rem;
+}
+
+.singup-container input {
+    padding: 1.5rem 2rem;
+    border: 0.1rem solid black;
+    border-radius: 5px;
+    font-size: 1.7rem;
+    font-weight: 500;
+    width: 100%;
+    color: var(--heading);
+    background: var(--bg);
+}
+
+.singup-container .gender-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg);
+    border-radius: 5px;
+}
+
+.singup-container .gender-container label {
+    display: flex;
+    margin: 1rem;
+    gap: 1rem;
+    padding-right: 10rem;
+}
+.btn-submit{
+    margin-bottom: 2rem;
 }
