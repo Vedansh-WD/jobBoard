@@ -1,0 +1,427 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bebas+Neue&family=Noto+Sans:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Work Sans', sans-serif;
+}
+
+/* ==================================================
+-+-+-+-+-+ Defoult coad +-+-+-+-+- 
+================================================== */
+
+:root {
+    --bg: #6bcfc3;
+    --bg-main: #ffffff;
+    --bg-helper: #942e61;
+    --heading: rgb(0, 0, 0);
+    --helper-tint: #f3f4ff;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+body {
+    overflow: hidden;
+    background: var(--bg);
+}
+
+h1,
+h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 5px;
+}
+
+h3 {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 1.8rem;
+}
+
+h4 {
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 2rem;
+}
+
+span {
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 1.5rem;
+}
+
+p {
+    color: var(--helper-tint);
+    line-height: 1.6;
+    font-size: 1.7rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* ==================================================
+-+-+-+-+-+ pre-defined coad +-+-+-+-+-
+================================================== */
+
+
+.section {
+    padding: 3rem 0rem;
+    overflow: hidden;
+    margin: 3rem;
+    border-radius: 7px;
+}
+
+.grid {
+    display: grid;
+    gap: 5rem;
+}
+
+.grid-1 {
+    display: grid;
+}
+
+.grid-2 {
+    display: grid;
+    gap: 10rem;
+}
+
+.grid-tow-column {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-three-column {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-four-column {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.grid-six-row {
+    grid-template-rows: repeat(6, 1fr);
+}
+
+.container {
+    max-width: 140rem;
+    margin: 0 auto;
+}
+
+.common-heading {
+    font-size: 3rem;
+    padding: 0 4rem;
+    margin-top: -3rem;
+}
+
+/* ==================================================
+-+-+-+-+-+ Header section start +-+-+-+-+-
+================================================== */
+
+header {
+    padding: 0 4.8rem;
+    height: 8rem;
+    background-color: var(--bg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    border-bottom: 2px solid black;
+}
+
+header>img {
+    height: 100%;
+}
+
+.navbar-list {
+    display: flex;
+    gap: 4.8rem;
+}
+
+.navbar-link:link,
+.navbar-link:visited {
+    display: inline-block;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--heading);
+}
+
+/* ==================================================
+-+-+-+-+-+ Hero section start +-+-+-+-+-
+================================================== */
+
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-helper);
+}
+
+.hero-image {
+    padding: 3rem;
+    background: var(--bg-helper);
+}
+
+.hero-image>img {
+    width: 100%;
+    height: 75vh;
+    border-radius: 5px;
+}
+
+/* ==================================================
+-+-+-+-+-+ Filter section start +-+-+-+-+-
+================================================== */
+.filters-section {
+    height: 20rem;
+}
+
+.filter {
+    background: var(--bg-helper);
+    height: 100%;
+    gap: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 7px;
+}
+
+.filter>select {
+    padding: 0.5rem 1rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    border-radius: 5px;
+    background: var(--bg-main);
+    color: var(--heading);
+    cursor: pointer;
+}
+
+.filter>select>option {
+    background: var(--bg-main);
+    font-weight: 500;
+}
+
+button {
+    border-radius: 5px;
+    padding: 1rem;
+    background: var(--bg-main);
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+/* ==================================================
+-+-+-+-+-+ jobs-display section start +-+-+-+-+-
+================================================== */
+.jobs-display-section {
+    font-family: 'Archivo Black', sans-serif;
+    height: auto;
+}
+
+.jobs-container {
+    box-sizing: border-box;
+    background: var(--bg-helper);
+    padding: 3rem;
+    border-radius: 7px;
+}
+
+/* ====== job-box css ======= */
+.job-box {
+    background: #6bcfc3;
+    height: 60rem;
+    padding: 2rem;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.box-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+    padding: 1rem 3rem;
+}
+
+.profile-image {
+    border-radius: 5px;
+    width: 10rem;
+    height: 10rem;
+    overflow: hidden;
+}
+
+.profile-image>img {
+    width: 10rem;
+    height: 10rem;
+}
+
+.box-center,
+.appy-report {
+    display: flex;
+    justify-content: space-between;
+}
+
+.box-bottom {
+    box-sizing: border-box;
+    height: 83%;
+    font-family: 'Courier New', Courier, monospace;
+    text-transform: capitalize;
+    padding: 1.5rem;
+    align-items: center;
+}
+
+.box-bottom>h4 {
+    height: 30px;
+    overflow: hidden;
+    font-size: 2rem;
+}
+
+.box-bottom>div {
+    border-bottom: 1px solid black;
+    padding: 1rem 0.2rem;
+}
+
+/* ==================================================
+-+-+-+-+-+ Contact section start +-+-+-+-+-
+================================================== */
+
+.section-contact-main {
+    background: var(--bg-helper);
+    padding: 2% 10%;
+    border-radius: 7px;
+}
+
+.section-contact-main>form {
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+}
+
+.section-contact-main input,
+.section-contact-main textarea {
+    padding: 1.5rem 2rem;
+    border: 0.1rem solid black;
+    border-radius: 5px;
+    font-size: 1.7rem;
+    font-weight: 500;
+    width: 100%;
+    color: var(--heading);
+    background: var(--bg);
+}
+
+.section-contact-main input[type="submit"] {
+    max-width: 30%;
+    float: right;
+}
+
+/* ==================================================
+  -+-+-+-+-+ Footer section start +-+-+-+-+-
+  ================================================== */
+.footer-section {
+    background: var(--bg-helper);
+    padding: 3rem;
+}
+
+.footer-section h3 {
+    margin-bottom: 3rem;
+}
+
+.f-links>ul,
+.f-service>ul,
+.f-address>address {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+    justify-content: center;
+}
+
+.footer-section>h3,
+.f-about>p,
+.f-links>ul>li,
+a,
+.f-service>ul>li,
+.f-address>address>div>p {
+    font-size: 1.8rem;
+    color: var(--helper-tint);
+}
+
+
+/* ==================================================
+  -+-+-+-+-+ login section start +-+-+-+-+-
+  ================================================== */
+
+.login-container {
+    background: var(--bg-helper);
+    padding: 5% 25%;
+    border-radius: 7px;
+}
+
+.login-container>form {
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+    padding-bottom: 5rem;
+}
+
+.login-container input {
+    padding: 1.5rem 2rem;
+    border: 0.1rem solid black;
+    border-radius: 5px;
+    font-size: 1.7rem;
+    font-weight: 500;
+    width: 100%;
+    color: var(--heading);
+    background: var(--bg);
+}
+
+.login-container>.grid {
+    margin-left: 1rem;
+}
+
+/* ==================================================
+  -+-+-+-+-+ Singup section start +-+-+-+-+-
+  ================================================== */
+
+.singup-container {
+    background: var(--bg-helper);
+    padding: 5% 25%;
+    border-radius: 7px;
+}
+
+.singup-container>form {
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+    padding-bottom: 5rem;
+}
+
+.singup-container input {
+    padding: 1.5rem 2rem;
+    border: 0.1rem solid black;
+    border-radius: 5px;
+    font-size: 1.7rem;
+    font-weight: 500;
+    width: 100%;
+    color: var(--heading);
+    background: var(--bg);
+}
+
+.singup-container .gender-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg);
+    border-radius: 5px;
+}
+
+.singup-container .gender-container label {
+    display: flex;
+    margin: 1rem;
+    gap: 1rem;
+    padding-right: 10rem;
+}
+.btn-submit{
+    margin-bottom: 2rem;
+}
