@@ -4,14 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> HireNet | Find A Jobs in india</title>
-    <link rel="icon" type="image/png" href="images/logo-2.webp"/>
+    <link rel="icon" type="image/png" href="images/logo.webp"/>
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css"rel="stylesheet"/>
     <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
-<?php include 'imp/dbconnect.php';?>
 <header id="Navbar">
-        <img src="img/logo.jpg" alt="logo"  id="logo">
+        <img src="images/logo.webp" alt="logo">
         <nav class="navbar">
             <ul class="navbar-list">
                 <li><a href="#Navbar" class="navbar-link Home">Home</a></li>
@@ -19,13 +18,17 @@
                 <li><a href="#Services" class="navbar-link About">About</a></li>
                 <li><a href="#Services" class="navbar-link Services">Services</a></li>
                 <li><a href="#Contact" class="navbar-link Contact">Contact</a></li>
-            </ul>           
+                <!-- <li><a href="login.html" class="navbar-link login" id="loginLink">Login</a></li> -->
+                <li id="login-btn" class="navbar-link login">
+                <a href="#" id="loginLink">Login</a>
+                </li>
+            </ul>          
         </nav>
 </header> 
 <main>
     <!-- hero-section start hear -->
     <section class="hero-section section">
-        <div class="hero-image"><img src="http://hirenet.orgfree.com/images/carousel-img-1.webp" alt="We Are Hireing"></div>
+        <div class="hero-image"><img src="images/carousel-img-1.webp" alt="We Are Hireing"></div>
     </section>
     <!-- Filter section start hear -->
     <section class="filters-section section">
@@ -168,7 +171,7 @@
 
 <!--   =============================jobs end =============================  -->          
     </section>
-    <!-- Conract section start hear -->
+    <!-- Contact section start hear -->
     <section class="section-contact section" id="Contact">
         <h2 class="common-heading">Contact</h2>
         <div class="section-contact-main contact-container">
@@ -226,8 +229,7 @@
             </div>
           </form>
         </div>
-      </section>
-    </main>
+    </section>
     <!-- Footer section start hear -->    
     <footer class="footer-section section" id="Services">
         <div class="grid-2 grid-four-column">
@@ -241,27 +243,27 @@
               <ul>
                 <li>
                   <i class="ri-corner-down-right-line"></i>
-                  <a href="#Navbar">Home</a> 
+                  <a href="#Navbar">Home</a>
                 </li>
                 <li>
                   <i class="ri-corner-down-right-line"></i>
-                  <a href="#Jobs">Jobs</a> 
+                  <a href="#Jobs">Jobs</a>
                 </li>
                 <li>
                   <i class="ri-corner-down-right-line"></i>
-                  <a href="#About">About</a> 
+                  <a href="#About">About</a>
                 </li>
                 <li>
                   <i class="ri-corner-down-right-line"></i>
-                  <a href="#Service">Services</a> 
+                  <a href="#Service">Services</a>    
                 </li>
                 <li>
                   <i class="ri-corner-down-right-line"></i>
-                  <a href="#Contact">contact</a> 
+                  <a href="#Contact">contact</a>
                 </li>
               </ul>
             </div>
-    
+
             <div class="f-service">
               <h3>Services</h3>
               <ul>
@@ -303,7 +305,8 @@
           </div>
         </div>
     </footer>
-
+</main>
+<?php include 'imp/_dbconnect.php';?>
 <script src="script.js"></script>
 </body>
 </html>

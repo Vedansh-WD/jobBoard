@@ -7,21 +7,48 @@ function applyFilters() {
 }
 
 // loging section //
+document.addEventListener("DOMContentLoaded", function () {
+  const loginLink = document.getElementById("loginLink");
+  const loginBtn = document.getElementById("login-btn");
+  let isLoggedIn = getLoginStatus();
 
-// Function to update the login link/button dynamically
-function updateLoginLink() {
-  const loginLinkContainer = document.getElementById("userLinkContainer");
-  const loginLink = loginLinkContainer.querySelector("a.navbar-link.login");
-  const isLoggedIn =
-    loginLinkContainer.getAttribute("data-isLoggedIn") === "true";
-  const username = loginLinkContainer.getAttribute("data-username");
+  updateLoginButton(isLoggedIn);
 
-  if (isLoggedIn) {
-    loginLink.textContent = username;
-    loginLink.href = "user_profile.html";
-  } else {
-    loginLink.textContent = "Login";
-    loginLink.href = "_login.html";
+  loginBtn.addEventListener("click", function (event) {
+    event.preventDefault();
+    toggleLoginStatus();
+    isLoggedIn = getLoginStatus();
+    updateLoginButton(isLoggedIn);
+  });
+
+  loginLink.addEventListener("click", function (event) {
+    if (isLoggedIn) {
+    } else {
+      event.preventDefault();
+      window.location.href = "https://hirenet.orgfree.com/login.html";
+    }
+  });
+
+  function getLoginStatus() {
+    return document.cookie.indexOf("loggedIn=true") !== -1;
   }
-}
-updateLoginLink();
+
+  function toggleLoginStatus() {
+    if (isLoggedIn) {
+      document.cookie =
+        "loggedIn=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+    } else {
+      document.cookie = "loggedIn=true; path=/;";
+    }
+  }
+
+  function updateLoginButton(isLoggedIn) {
+    if (isLoggedIn) {
+      loginLink.href = "https://hirenet.orgfree.com/register.html";
+      loginLink.textContent = "Logout";
+    } else {
+      loginLink.href = "https://hirenet.orgfree.com/login.html";
+      loginLink.textContent = "Login";
+    }
+  }
+});

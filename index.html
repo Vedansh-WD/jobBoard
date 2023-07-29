@@ -6,7 +6,7 @@
     <title> HireNet | Find A Jobs in india</title>
     <link rel="icon" type="image/png" href="images/logo.webp"/>
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css"rel="stylesheet"/>
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
 <header id="Navbar">
@@ -18,9 +18,10 @@
                 <li><a href="#Services" class="navbar-link About">About</a></li>
                 <li><a href="#Services" class="navbar-link Services">Services</a></li>
                 <li><a href="#Contact" class="navbar-link Contact">Contact</a></li>
-                <li id="userLinkContainer" data-isLoggedIn="<?php echo $loggedIn ? 'true' : 'false'; ?>" data-username="<?php echo $username; ?>">
+                <!-- <li id="userLinkContainer" data-isLoggedIn="<?php echo $loggedIn ? 'true' : 'false'; ?>" data-username="<?php echo $username; ?>">
                   <a href="#" class="navbar-link login" id="loginLink">Login</a>
-              </li>
+              </li> -->
+              <li id="login-btn" class="navbar-link login"><a href="login.html">Login</a></li>
             </ul>           
         </nav>
 </header> 
