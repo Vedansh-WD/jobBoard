@@ -11,13 +11,19 @@
 -+-+-+-+-+ Defoult coad +-+-+-+-+- 
 ================================================== */
 
-:root {
+/* :root {
     --bg: #6bcfc3;
-    --bg-main: #ffffff;
-    --bg-helper: #942e61;
+    --bg-helper: #000000;
     --heading: rgb(0, 0, 0);
     --helper-tint: #f3f4ff;
-}
+} */
+
+:root {
+    --bg: #F8F9FA;
+    --bg-helper: #6bcfc3;
+    --heading: #12124E;
+    --helper-tint: #12124E;
+ }
 
 html {
     font-size: 62.5%;
@@ -34,31 +40,36 @@ h1,
 h2 {
     font-family: 'Bebas Neue', sans-serif;
     letter-spacing: 5px;
+    color: var(--heading);
 }
 
 h3 {
     font-family: 'Archivo Black', sans-serif;
     font-size: 1.8rem;
+    color: var(--helper-tint);
 }
 
 h4 {
     font-family: 'Noto Sans', sans-serif;
     font-size: 2rem;
+    color: var(--heading);
 }
 
 span {
     font-family: 'Noto Sans', sans-serif;
     font-size: 1.5rem;
+    color: var(--heading);
 }
 
 p {
-    color: var(--helper-tint);
     line-height: 1.6;
     font-size: 1.7rem;
+    color: var(--heading);
 }
 
 a {
     text-decoration: none;
+    color: var(--heading);
 }
 
 
@@ -76,7 +87,7 @@ a {
 
 .grid {
     display: grid;
-    gap: 5rem;
+    gap: 4rem;
 }
 
 .grid-1 {
@@ -122,7 +133,7 @@ a {
 header {
     padding: 0 4.8rem;
     height: 8rem;
-    background-color: var(--bg);
+    background-color: var(--bg-helper);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -163,7 +174,6 @@ header>img {
 }
 
 .hero-image {
-    padding: 3rem;
     background: var(--bg-helper);
 }
 
@@ -191,24 +201,25 @@ header>img {
 }
 
 .filter>select {
-    padding: 0.5rem 1rem;
+    padding: .7rem 1rem;
     font-size: 1.5rem;
     font-weight: 700;
     border-radius: 5px;
-    background: var(--bg-main);
+    background: var(--bg);
     color: var(--heading);
     cursor: pointer;
 }
 
 .filter>select>option {
-    background: var(--bg-main);
+    background: var(--bg);
     font-weight: 500;
 }
 
 button {
     border-radius: 5px;
     padding: 1rem;
-    background: var(--bg-main);
+    background: var(--bg);
+    color: var(--heading);
     font-size: 1rem;
     font-weight: 700;
 }
@@ -230,10 +241,10 @@ button {
 
 /* ====== job-box css ======= */
 .job-box {
-    background: #6bcfc3;
+    background: var(--bg);
     height: 60rem;
     padding: 2rem;
-    border-radius: 5px;
+    border-radius: 20px;
     overflow: hidden;
 }
 
