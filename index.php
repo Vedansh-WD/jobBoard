@@ -82,9 +82,8 @@
     </section>
     <!-- jobs-display section start hear -->
     <section class="jobs-display-section section" id="Jobs">
-        <h2 class="common-heading">Some Popular Jobs</h2>
-        <div class="jobs-container grid grid-three-column">
-<!--   =============================jobs start=============================  -->
+      <h2 class="common-heading">Some Popular Jobs</h2>
+      <div class="jobs-container grid grid-three-column">
             <div class="job-box">
                 <div class="box-top">
                     <div class="profile-image"><img id="profile-pic" src="images/profile image/tcs.png" alt="profile image"></div>
@@ -167,9 +166,52 @@
                         <div class="Report"><h4>Report Job</h4></div>
                     </div>                     
                 </div>
-            </div>  
-
-<!--   =============================jobs end =============================  -->          
+            </div>   
+            
+            <?php
+            include 'imp/_dbconnect.php';
+            $sql = "SELECT * FROM `jobs`";
+            $result = mysqli_query($conn, $sql);
+            if (mysqli_num_rows($result) > 0) {
+                echo '<div class="job-box">';
+                echo '<div class="box-top">';
+                echo '<div class="profile-image"><img id="profile-pic" src="images/profile image/hiring.jpg" alt="profile image"></div>';
+                echo '<h3 id="company-name">Hiring</h3>';
+                echo '</div>';
+                while ($row = mysqli_fetch_assoc($result)) {
+                    $jobTitle = $row['jobTitle'];
+                    $location = $row['location'];
+                    $jobShortdesc = $row['jobShortdesc'];
+                    $minSalary = $row['minSalary'];
+                    $maxSalary = $row['maxSalary'];
+                    $tags = $row['tags'];
+                    $exp = $row['exp'];
+                    echo '<div class="box-bottom grid-1 grid-six-rows">';
+                    echo '<div>';
+                    echo '<h4>job-role : <span id="job-role">' . $jobTitle . '</span></h4>';
+                    echo '</div>';
+                    echo '<div class="box-center">';
+                    echo '<div>';
+                    echo '<h4><i class="ri-map-pin-line"> Location : <span id="location">' . $location . '</span></i></h4>';
+                    echo '</div>';
+                    echo '<div><h4>salary : ₹ <span>' . $minSalary . '</span> - <span>' . $maxSalary . '</h4></div>';
+                    echo '</div>';
+                    echo '<div><h4>job Description : <span id="job-description">' . $jobShortdesc . '</span></h4></div>';
+                    echo '<div><h4>Exp : <span id="skills">' . $exp . '</span></h4></div>';
+                    echo '<div><h4>Tags : <span id="tag">' . $tags . '</span></h4></div>';
+                    echo '<div class="select-col appy-report">';
+                    echo '<div class="apply"><h4>Apply Now</h4></div>';
+                    echo '<div class="intrested"><h4>Intrested</h4></div>';
+                    echo '</div>';
+                    echo '</div>';
+                }
+                echo '</div>';
+            } else {
+                echo '<p>No job data found.</p>';
+            }
+            ?>
+                   
+      </div>
     </section>
     <!-- Contact section start hear -->
     <section class="section-contact section" id="Contact">
