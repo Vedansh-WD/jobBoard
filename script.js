@@ -52,3 +52,27 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 });
+
+
+// //  View job details  //
+const jobBoxes = document.querySelectorAll('.job-box');
+const popups = document.querySelectorAll('.popup');
+const closeButtons = document.querySelectorAll('.close-popup');
+
+jobBoxes.forEach((jobBox) => {
+    jobBox.addEventListener('click', (event) => {
+        const clickedJobBox = event.currentTarget;
+        const jobCount = clickedJobBox.getAttribute('data-job-count');
+        const popup = document.querySelector('#popup-' + jobCount);
+        popup.style.display = 'flex';
+    });
+});
+
+closeButtons.forEach((closeButton) => {
+    closeButton.addEventListener('click', (event) => {
+        const clickedCloseButton = event.currentTarget;
+        const popupId = clickedCloseButton.getAttribute('data-popup-id');
+        const popup = document.querySelector('#popup-' + popupId);
+        popup.style.display = 'none';
+    });
+});
