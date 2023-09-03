@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title> HireNet | Login Hear </title>
+    <title> HireNet | Login Here </title>
+    <meta name="description" content="Welcome to jobNest one of the best job board/providing service in India. We offer high quality experience to our customers. Login fast and get hired by your dream companies.">
+    <meta author="Vedansh, Jatin" content="Job Nest Devs">
     <link rel="icon" type="image/png" href="images/logo.webp" />
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/style.css" />

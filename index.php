@@ -3,10 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> HireNet | Find A Jobs in india</title>
+    
+    <title> HireNet | Find Jobs in india</title>
     <link rel="icon" type="image/png" href="images/logo.webp" />
+    <meta name="description" content="Welcome to jobNest one of the best job board/providing service in India. We offer high quality experience to our customers.">
+    <meta author="Vedansh, Jatin" content="Job Nest Devs">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/style.css" />
+    <meta name="google-site-verification" content="JpNG03a-Gmz7K9xL0yNaUiHYGsgb37q_jjS6V1Fc0SA" />
 </head>
 <body>
     <header id="Navbar">
@@ -20,7 +24,7 @@
             <div class="hero-image"><img src="images/carousel-img-1.webp" alt="We Are Hireing"></div>
         </section>
         <!-- Filter section start hear -->
-        <section class="filters-section section">
+        <!-- <section class="filters-section section">
             <div class="filter">
 
                 <select id="Skills">
@@ -66,52 +70,14 @@
             </div>
 
             <div id="jobList">
-                <!-- Job listing results will be displayed here -->
+                Job listing results will be displayed here
             </div>
-        </section>
+        </section> -->
         <!-- jobs-display section start hear -->
         <section class="jobs-display-section section" id="Jobs">
             <h2 class="common-heading">Some Popular Jobs</h2>
             <div class="jobs-container grid grid-three-column">
-                <!-- job not in database -->
-                <div class="job-box">
-                    <div class="box-top">
-                        <div class="profile-image"><img id="profile-pic" src="images/profile image/tcs.png"
-                                alt="profile image"></div>
-                        <h3 id="company-name">Tata Consultancy Services</h3>
-                    </div>
-                    <div class="box-bottom grid-1 grid-six-rows">
-                        <div>
-                            <h4>job-role : <span id="job-role">Front-end Devloper also backend </span></h4>
-                        </div>
-                        <div class="box-center">
-                            <div>
-                                <h4><i class="ri-map-pin-line"> Location : <span id="location">Gujarat</span></i></h4>
-                            </div>
-                            <div>
-                                <h4>salary : ₹ <span>20,000</span></h4>
-                            </div>
-                        </div>
-                        <div>
-                            <h4>job Description : <span id="job-description">We’re looking for a Front-end developer who
-                                    will take a key role on our team.</span></h4>
-                        </div>
-                        <div>
-                            <h4>Skills : <span id="skills">HTML:5 , CSS , JAVASCRIPT</span></h4>
-                        </div>
-                        <div>
-                            <h4>Tags : <span id="tag">#Fronted_Devloper,#HTML,#JAVASCRPIT</span></h4>
-                        </div>
-                        <div class="appy-report">
-                            <div class="apply">
-                                <h4>Apply!</h4>
-                            </div>
-                            <div class="Report">
-                                <h4>Know more</h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                
                 <!-- job from database -->
                 <?php
                 include 'imp/_dbconnect.php';
@@ -131,12 +97,12 @@
                         $exp = $row['exp'];
                         echo '<div class="job-box">';
                         echo '<div class="box-top">';
-                        echo '<div class="profile-image"><img id="profile-pic" src="images/profile image/hiring.jpg" alt="profile image"></div>';
-                        echo '<h3 id="company-name">Hiring</h3>';
+                        echo '<div class="profile-image"><img id="profile-pic" src="images/profile image/hiring.webp" alt="profile image"></div>';
+                        echo '<h3 id="company-name">' . $jobTitle . '</h3>';
                         echo '</div>';
                         echo '<div class="box-bottom grid-1 grid-six-rows">';
                         echo '<div>';
-                        echo '<h4>job-role : <span id="job-role">' . $jobTitle . '</span></h4>';
+                        echo '<h4>job-role : <span id="job-role">' . $jobType . '</span></h4>';
                         echo '</div>';
                         echo '<div class="box-center">';
                         echo '<div>';
@@ -148,12 +114,11 @@
                         echo '<div><h4>Exp : <span id="skills">' . $exp . '</span></h4></div>';
                         echo '<div><h4>Tags : <span id="tag">' . $tags . '</span></h4></div>';
                         echo '<div class="select-col appy-report">';
-                        echo '<div class="apply"><h4>Apply!</h4></div>';
-                        echo '<div class="intrested"><h4>Know more</h4></div>';
+                        echo '<button class="apply"><h4><a href="https://hirenet.orgfree.com/jobs.php">Apply!</a></h4></button>';
+                        echo '<button class="more"><h4><a href="https://hirenet.orgfree.com/jobs.php"> Know more</a></h4></button>';
                         echo '</div>';
                         echo '</div>';
                         echo '</div>';
-                        $jobCount++;
                     }
                     echo '</div>';
                 } else {
@@ -166,7 +131,7 @@
         <section class="section-contact section" id="Contact">
             <h2 class="common-heading">Contact</h2>
             <div class="section-contact-main contact-container">
-                <form action="https://formspree.io/f/xeqbqndk" method="POST">
+                <form action="https://formspree.io/f/xrgwqrze" method="POST">
                     <div class="grid grid-tow-column">
                         <div>
                             <label for="username"></label>
@@ -204,6 +169,6 @@
         ?>
     </footer>
     <?php include 'imp/_dbconnect.php';?>
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
 </body>
-</html>
+</html
